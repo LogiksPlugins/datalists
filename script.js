@@ -218,7 +218,7 @@ function newGroup() {
 						html+=ans;
 						html+="</li>";
 						
-						$("#datalistMaster").append(html);
+						$("#datalistMaster").prepend(html);
 						
 						html1="<option value='"+ans+"'>"+ans+" (0)</option>";
 						$("#datalistSelector").append(html1);
