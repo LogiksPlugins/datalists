@@ -1,6 +1,11 @@
 <?php
 if(!defined('ROOT')) exit('No direct script access allowed');
 
+if(!_db()) {
+  echo "<h1 align=center>No DB Configured for this instance</h1>";
+  exit();
+}
+
 loadModule("pages");
 
 //echo _css("datalists");
