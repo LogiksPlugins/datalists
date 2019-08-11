@@ -16,9 +16,9 @@ function pageContentArea() {
   	<div class='col-md-12'>
 	     <button class='btn btn-default visible-xs dataListoNoF' onclick=\"$('#pgsidebar').toggle();\"><i class='fa fa-list'></i></button>
 	</div>
-	<div class='col-md-12'>
+	<div class='col-md-12'  style='padding: 1px;'>
     	<div class='box'>
-    	    <div class='box-body ' style='padding: 3px;'>
+    	    <div class='box-body'>
            		<div class='table-responsive no-padding'>
                     <table class='table table-hover table table-striped table-bordered'>
                         <thead>
@@ -40,7 +40,7 @@ function pageContentArea() {
                                 <td align=center><input type='checkbox' name='blocked' value='true' /></td>
                                 <td><input type='text' name='sortorder' class='form-control input-sm' style='width:100%;' placeholder='Sort Order'/></td>
             					<td><input type='text' name='privilege' class='form-control input-sm last-child' style='width:100%;' placeholder='Roles'/></td>
-                                <td><button onclick='addRecord()' class='btn btn-sm btn-success pull-right'><i class='fa fa-bolt'  aria-hidden='true'></i></button></td>
+                                <td><button onclick='addRecord()' class='btn btn-sm btn-default pull-right'><i class='fa fa-bolt'  aria-hidden='true'></i></button></td>
                             </tr>
         				</thead>
         				<tbody id='datalistGrid'>
