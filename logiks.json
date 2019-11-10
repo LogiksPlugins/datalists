@@ -1,0 +1,28 @@
+{
+    "name": "Logiks Datalist",
+    "version": "1.0",
+    "status": "stable",
+    "type": "module",
+    "package":"org.openlogiks.datalists",
+    "description": "Datalist Manager for CMS, BizSuite2",
+    "keywords": "logiks,modules,bizsuite2,search",
+    "license": "SILK",
+    "marketid": "",
+    "homepage": "https://github.com/LogiksPlugins/search.git",
+    "bugs": "https://support.smartinfologiks.com",
+    "private": true,
+    "dependencies": {
+        "core": "+4.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/LogiksPlugins/search.git"
+    },
+    "authors": [
+        {
+            "name": "SmartinfoLogiks Team",
+            "email": "admin@smartinfologiks.com",
+            "authorid":"silkadmin"
+        }
+    ]
+}
