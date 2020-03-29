@@ -8,7 +8,7 @@
     "keywords": "logiks,modules,bizsuite2,search",
     "license": "SILK",
     "marketid": "",
-    "homepage": "https://github.com/LogiksPlugins/search.git",
+    "homepage": "https://github.com/LogiksPlugins/datalists",
     "bugs": "https://support.smartinfologiks.com",
     "private": true,
     "dependencies": {
