@@ -149,7 +149,8 @@ function loadDatalistGrid(gid) {
 	lx=_service("datalists","listData")+"&gid="+gid;
 	processAJAXQuery(lx,function(txt) {
 		jData=$.parseJSON(txt);
-		$("#datalistGrid .ajaxloading").closest("tr").detach();
+		//$("#datalistGrid .ajaxloading").closest("tr").detach();
+		$("#datalistGrid").html("");
 		$.each(jData.Data,function(k,v) {
 		//	console.log(v);
 			v.privilege=v.privilege.split(",");
