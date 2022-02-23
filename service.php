@@ -49,6 +49,10 @@ if(isset($_REQUEST['action'])) {
 						$_POST['created_by']=$_POST['edited_by']=$_SESSION['SESS_USER_ID'];
 						if(isset($_POST['id'])) unset($_POST['id']);
 						
+						foreach($_POST as $a=>$b) {
+							if(strlen($b)<=0) unset($_POST[$a]);
+						}
+						
 						$result = _db()->_insertQ1(_dbTable("lists"),$_POST)->_run();
 						if($result) {
 							printServiceMsg("success");
