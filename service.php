@@ -47,7 +47,8 @@ if(isset($_REQUEST['action'])) {
 						$_POST['created_on']=date("Y-m-d H:i:s");
 						$_POST['edited_on']=date("Y-m-d H:i:s");
 						$_POST['created_by']=$_POST['edited_by']=$_SESSION['SESS_USER_ID'];
-
+						if(isset($_POST['id'])) unset($_POST['id']);
+						
 						$result = _db()->_insertQ1(_dbTable("lists"),$_POST)->_run();
 						if($result) {
 							printServiceMsg("success");
