@@ -29,7 +29,7 @@ if(isset($_REQUEST['action'])) {
 						$_POST['privilege']="*";
 					}
 
-					$_POST['value']=preg_replace("/[^A-Za-z0-9]/", "_", $_POST['value']);
+					$_POST['value']=preg_replace("/[^A-Za-z0-9\-.]/", "_", $_POST['value']);
 
 					if(isset($_POST['id']) && strlen($_POST['id'])>0) {
 						$_POST['edited_on']=date("Y-m-d H:i:s");
