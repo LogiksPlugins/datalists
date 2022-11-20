@@ -26,7 +26,7 @@ function pageContentArea() {
                                 <th style='width: 10px'>#</th>
                                 <th>Title</th>
                                 <th>Value</th>
-                                <th style=' width: 100px;'>Class</th>
+                                <th style=' width: 100px;'>Class/Params</th>
                                 <th style=' width: 50px;'>Blocked</th>
                                 <th style=' width: 20px;'>Sort</th>
             					<th>Role</th>

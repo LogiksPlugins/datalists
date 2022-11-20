@@ -34,8 +34,11 @@ if(isset($_REQUEST['action'])) {
 					if(isset($_POST['id']) && strlen($_POST['id'])>0) {
 						$_POST['edited_on']=date("Y-m-d H:i:s");
 						$_POST['edited_by']=$_SESSION['SESS_USER_ID'];
-
-						$result = _db()->_updateQ(_dbTable("lists"),$_POST,["groupid"=>$_REQUEST['gid'],"id"=>$_REQUEST['id']])->_whereOR("guid",["global",$_SESSION['SESS_GUID']])->_RUN();
+                        if($_SESSION['SESS_PRIVILEGE_ID']<=ADMIN_PRIVILEGE_ID) {
+                            $result = _db()->_updateQ(_dbTable("lists"),$_POST,["groupid"=>$_REQUEST['gid'],"id"=>$_REQUEST['id']])->_RUN();
+                        } else {
+                            $result = _db()->_updateQ(_dbTable("lists"),$_POST,["groupid"=>$_REQUEST['gid'],"id"=>$_REQUEST['id']])->_whereOR("guid",["global",$_SESSION['SESS_GUID']])->_RUN();
+                        }
 						if($result) {
 							printServiceMsg("success");
 						} else {
