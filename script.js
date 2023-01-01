@@ -97,6 +97,7 @@ $(function() {
          if(key == 13)  // the enter key code
           {
             	e.preventDefault();
+            	loadMasterList();
           }
     });   
     //end::rimpal
@@ -109,7 +110,7 @@ $(function() {
 	
 	$("#pgToolbarSearch").keyup(function(e) {
 		e.preventDefault();
-		loadMasterList();
+		
 	});
 	
 	loadMasterList();
