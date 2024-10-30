@@ -29,7 +29,7 @@ function pageContentArea() {
                                 <th style=' width: 100px;'>Class/Params</th>
                                 <th style=' width: 50px;'>Blocked</th>
                                 <th style=' width: 20px;'>Sort</th>
-            					<th>Role</th>
+            					<th>Privilege</th>
                                 <th style=' width: 100px;'>Action</th>
                             </tr>
                             <tr id='formEditor' class='formTR hidden'>
@@ -39,7 +39,7 @@ function pageContentArea() {
                                 <td><input type='text' name='class' class='form-control input-sm' style='width:100%;' placeholder='Class'/></td>
                                 <td align=center><input type='checkbox' name='blocked' value='true' /></td>
                                 <td><input type='text' name='sortorder' class='form-control input-sm' style='width:100%;' placeholder='Sort Order'/></td>
-            					<td><input type='text' name='privilege' class='form-control input-sm last-child' style='width:100%;' placeholder='Roles'/></td>
+            					<td><input type='text' name='privilege' class='form-control input-sm last-child' style='width:100%;' placeholder='Privilege'/></td>
                                 <td><button onclick='addRecord()' class='btn btn-sm btn-default pull-right'><i class='fa fa-bolt'  aria-hidden='true'></i></button></td>
                             </tr>
         				</thead>

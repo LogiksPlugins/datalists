@@ -173,8 +173,8 @@ function loadDatalistGrid(gid) {
 			html+="<td name='sortorder'>"+v.sortorder+"</td>";
 			html+="<td name='privilege'>"+v.privilege+"</td>";
 			html+="<td>";
-				html+="<button cmd='delete' class='btn btn-sm btn-default pull-right'><i class='fa fa-trash-o'  aria-hidden='true'></i></button>&nbsp;";
-				html+="<button cmd='edit' class='btn btn-sm btn-default pull-right'><i class='fa fa-pencil-square-o'  aria-hidden='true'></i></button>&nbsp;";
+				html+="<button cmd='delete' class='btn btn-sm btn-default pull-right'><i class='fa fa-trash'  aria-hidden='true'></i></button>&nbsp;";
+				html+="<button cmd='edit' class='btn btn-sm btn-default pull-right'><i class='fa fa-pencil'  aria-hidden='true'></i></button>&nbsp;";
 			html+="</td>";
 			html+="</tr>";
 			
@@ -227,10 +227,10 @@ function newGroup() {
 						$("#datalistSelector").val(ans);
 						
 						
-						//$("#datalistMaster .active").removeClass('active');
-						//$("#datalistMaster li.list-group-item[data-key='"+ans+"']").addClass('active');
+						$("#datalistMaster .active").removeClass('active');
+						$("#datalistMaster li.list-group-item[data-key='"+ans+"']").addClass('active');
 
-						//loadDatalistGrid(ans);
+						loadDatalistGrid(ans);
 						
 						$("#datalistSelector").trigger("change");
 					}

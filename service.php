@@ -17,9 +17,9 @@ if(isset($_REQUEST['action'])) {
 			case 'listData':
 				$result = [];
 				if(isset($_REQUEST['gid'])) {
-					$result = _db()->_selectQ(_dbTable("lists"),"id,groupid,title,value,class,privilege,sortorder,blocked,edited_on",$whereCommon)->_where(
-											["groupid"=>$_REQUEST['gid']]
-									)->_orderBy("sortorder ASC")->_GET();
+				    $result = _db()->_selectQ(_dbTable("lists"),"id,groupid,title,value,class,privilege,sortorder,blocked,edited_on",$whereCommon)->_where(
+							["groupid"=>$_REQUEST['gid']]
+					)->_orderBy("sortorder ASC")->_GET();
 				}
 				printServiceMsg($result);
 				break;
@@ -30,6 +30,8 @@ if(isset($_REQUEST['action'])) {
 					}
 
 					$_POST['value']=preg_replace("/[^A-Za-z0-9\-.]/", "_", $_POST['value']);
+					
+					if(!isset($_POST['class']) || $_POST['class']=="null") $_POST['class'] = "";
 
 					if(isset($_POST['id']) && strlen($_POST['id'])>0) {
 						$_POST['edited_on']=date("Y-m-d H:i:s");
